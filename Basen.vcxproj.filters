@@ -13,10 +13,60 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{3b29de09-2b66-4875-a3e2-3246d87360cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\utils">
+      <UniqueIdentifier>{70e962e6-4472-4232-abac-b014a90c536c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\config">
+      <UniqueIdentifier>{ff5a0c6d-8d65-4304-ab69-6ed7f91e04aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\except">
+      <UniqueIdentifier>{54b762ce-38fc-461b-8223-8ceeadd4e146}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\except">
+      <UniqueIdentifier>{b28aa4a8-7bc9-4b31-a8d5-bd102423b919}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\utils\logger.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\except\genericException.cpp">
+      <Filter>Source Files\except</Filter>
+    </ClCompile>
+    <ClCompile Include="src\except\IOException.cpp">
+      <Filter>Source Files\except</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\serviceHandler.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\fileIO.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\utils\logger.hpp">
+      <Filter>Resource Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\config.hpp">
+      <Filter>Resource Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="src\except\genericException.hpp">
+      <Filter>Resource Files\except</Filter>
+    </ClInclude>
+    <ClInclude Include="src\except\IOException.hpp">
+      <Filter>Resource Files\except</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\serviceHandler.hpp">
+      <Filter>Resource Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\fileIO.hpp">
+      <Filter>Resource Files\utils</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -96,7 +96,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>C:\C++\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-main-d.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-audio-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;vorbisenc.lib;ws2_32.lib;vorbisfile.lib;vorbis.lib;ogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-main-d.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-audio-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;vorbisenc.lib;ws2_32.lib;vorbisfile.lib;vorbis.lib;ogg.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -111,7 +111,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>C:\C++\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-main-d.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-audio-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;vorbisenc.lib;ws2_32.lib;vorbisfile.lib;vorbis.lib;ogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-main-d.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-audio-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;vorbisenc.lib;ws2_32.lib;vorbisfile.lib;vorbis.lib;ogg.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -130,7 +130,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>C:\C++\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-main.lib;sfml-graphics-s.lib;sfml-window-s.lib;sfml-audio-s.lib;sfml-network-s.lib;sfml-system-s.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;vorbisenc.lib;ws2_32.lib;vorbisfile.lib;vorbis.lib;ogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-main.lib;sfml-graphics-s.lib;sfml-window-s.lib;sfml-audio-s.lib;sfml-network-s.lib;sfml-system-s.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;vorbisenc.lib;ws2_32.lib;vorbisfile.lib;vorbis.lib;ogg.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -149,12 +149,25 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>C:\C++\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-main.lib;sfml-graphics-s.lib;sfml-window-s.lib;sfml-audio-s.lib;sfml-network-s.lib;sfml-system-s.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;vorbisenc.lib;ws2_32.lib;vorbisfile.lib;vorbis.lib;ogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-main.lib;sfml-graphics-s.lib;sfml-window-s.lib;sfml-audio-s.lib;sfml-network-s.lib;sfml-system-s.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;openal32.lib;flac.lib;vorbisenc.lib;ws2_32.lib;vorbisfile.lib;vorbis.lib;ogg.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\except\genericException.cpp" />
+    <ClCompile Include="src\except\IOException.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\utils\fileIO.cpp" />
+    <ClCompile Include="src\utils\serviceHandler.cpp" />
+    <ClCompile Include="src\utils\logger.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\config\config.hpp" />
+    <ClInclude Include="src\except\genericException.hpp" />
+    <ClInclude Include="src\except\IOException.hpp" />
+    <ClInclude Include="src\utils\fileIO.hpp" />
+    <ClInclude Include="src\utils\serviceHandler.hpp" />
+    <ClInclude Include="src\utils\logger.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
