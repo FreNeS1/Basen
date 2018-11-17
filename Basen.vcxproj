@@ -160,6 +160,7 @@
     <ClCompile Include="src\utils\fileIO.cpp" />
     <ClCompile Include="src\utils\serviceHandler.cpp" />
     <ClCompile Include="src\utils\logger.cpp" />
+    <ClCompile Include="utils\misc.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\config\config.hpp" />
@@ -168,6 +169,7 @@
     <ClInclude Include="src\utils\fileIO.hpp" />
     <ClInclude Include="src\utils\serviceHandler.hpp" />
     <ClInclude Include="src\utils\logger.hpp" />
+    <ClInclude Include="utils\misc.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
