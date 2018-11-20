@@ -158,6 +158,8 @@
     <ClCompile Include="src\except\IOException.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\utils\fileIO.cpp" />
+    <ClCompile Include="src\utils\miscelaneous.cpp" />
+    <ClCompile Include="src\utils\random.cpp" />
     <ClCompile Include="src\utils\serviceHandler.cpp" />
     <ClCompile Include="src\utils\logger.cpp" />
     <ClCompile Include="utils\misc.cpp" />
@@ -167,8 +169,10 @@
     <ClInclude Include="src\except\genericException.hpp" />
     <ClInclude Include="src\except\IOException.hpp" />
     <ClInclude Include="src\utils\fileIO.hpp" />
-    <ClInclude Include="src\utils\serviceHandler.hpp" />
     <ClInclude Include="src\utils\logger.hpp" />
+    <ClInclude Include="src\utils\miscelaneous.hpp" />
+    <ClInclude Include="src\utils\random.hpp" />
+    <ClInclude Include="src\utils\serviceHandler.hpp" />
     <ClInclude Include="utils\misc.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

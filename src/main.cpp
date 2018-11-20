@@ -27,8 +27,6 @@ int main()
 		window.display();
 	}
 
-	
-
 	try {
 		Basen::ServiceHandler::setLogger(new Basen::Logger(Basen::config::app::VERSION, "log.log"));
 

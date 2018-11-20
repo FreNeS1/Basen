@@ -3,7 +3,7 @@
 namespace Basen {
 	std::unique_ptr<Logger> ServiceHandler::m_logger(nullptr);
 
-	void ServiceHandler::setLogger(Logger * t_logger)
+	void ServiceHandler::setLogger(Logger *t_logger)
 	{
 		ServiceHandler::m_logger.reset(t_logger);
 	}
