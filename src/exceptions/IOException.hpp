@@ -2,11 +2,11 @@
 #define IO_EXCEPTION_HPP
 
 #include <string>
-#include "genericException.hpp"
+#include "basenException.hpp"
 
 namespace Basen {
 
-	class IOException : public GenericException {
+	class IOException : public BasenException {
 
 	public:
 		explicit		IOException(std::string t_message);

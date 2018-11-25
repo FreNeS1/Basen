@@ -16,10 +16,4 @@ namespace Basen {
 		t_string.erase(std::remove(t_string.begin(), t_string.end(), '"'), t_string.end());
 	}
 
-	template<class T>
-	T Interpolate(const T& t_x0, const T& t_x1, float t_y0, float t_y1, float t_y)
-	{
-		return static_cast<T>((((t_x1 - t_x0) / (t_y1 - t_y0)) * (t_y - t_y0)) + t_x0);
-	}
-
 }

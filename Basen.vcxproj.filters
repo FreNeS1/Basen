@@ -16,17 +16,47 @@
     <Filter Include="Source Files\utils">
       <UniqueIdentifier>{3b29de09-2b66-4875-a3e2-3246d87360cb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\except">
-      <UniqueIdentifier>{b28aa4a8-7bc9-4b31-a8d5-bd102423b919}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\config">
       <UniqueIdentifier>{ff5a0c6d-8d65-4304-ab69-6ed7f91e04aa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\except">
-      <UniqueIdentifier>{54b762ce-38fc-461b-8223-8ceeadd4e146}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\utils">
       <UniqueIdentifier>{70e962e6-4472-4232-abac-b014a90c536c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ecs">
+      <UniqueIdentifier>{bf476632-3014-41e2-86b1-7c96ffdb3940}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ecs">
+      <UniqueIdentifier>{ecf728ed-7b16-4954-bc7a-a11ed18db7bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ecs\component">
+      <UniqueIdentifier>{8442da45-c3cb-48a4-8109-76e77352edaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ecs\component">
+      <UniqueIdentifier>{9a76ef1e-69e3-4b71-ae17-19cca630979a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ecs\core">
+      <UniqueIdentifier>{20bb5f98-037c-4978-81ae-cb71098bc4e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ecs\core">
+      <UniqueIdentifier>{257bc46c-2a79-4ad0-80de-068c7cc2cb6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utils\primitives">
+      <UniqueIdentifier>{4e7965ea-5959-41b4-9945-694e97c3d0f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils\primitives">
+      <UniqueIdentifier>{ee2a7add-56ce-419f-bcbf-678ed5f5f668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\resources">
+      <UniqueIdentifier>{327677ea-8171-4f75-ad5a-f46bf479d20a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\resources">
+      <UniqueIdentifier>{1dc6b73a-06fe-4e53-b3e6-2306cc8c5e47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\exceptions">
+      <UniqueIdentifier>{5342bd21-def6-4d57-89fd-b5573608a949}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\exceptions">
+      <UniqueIdentifier>{b078f8fa-e764-45e5-84cb-97454b6900eb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -36,37 +66,40 @@
     <ClCompile Include="src\utils\logger.cpp">
       <Filter>Source Files\utils</Filter>
     </ClCompile>
-    <ClCompile Include="src\except\genericException.cpp">
-      <Filter>Source Files\except</Filter>
-    </ClCompile>
-    <ClCompile Include="src\except\IOException.cpp">
-      <Filter>Source Files\except</Filter>
-    </ClCompile>
     <ClCompile Include="src\utils\serviceHandler.cpp">
       <Filter>Source Files\utils</Filter>
     </ClCompile>
     <ClCompile Include="src\utils\fileIO.cpp">
       <Filter>Source Files\utils</Filter>
     </ClCompile>
-    <ClCompile Include="utils\misc.cpp">
-      <Filter>Source Files\utils</Filter>
+    <ClCompile Include="component.cpp">
+      <Filter>Source Files\ecs\core</Filter>
     </ClCompile>
     <ClCompile Include="src\utils\miscelaneous.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\utils</Filter>
     </ClCompile>
     <ClCompile Include="src\utils\random.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ecs\entityManager.cpp">
+      <Filter>Source Files\ecs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ecs\core\component.cpp">
+      <Filter>Source Files\ecs\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\primitives\bitmask.cpp">
+      <Filter>Source Files\utils\primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="src\exceptions\IOException.cpp">
+      <Filter>Source Files\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="src\exceptions\basenException.cpp">
+      <Filter>Source Files\exceptions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\config\config.hpp">
       <Filter>Header Files\config</Filter>
-    </ClInclude>
-    <ClInclude Include="src\except\genericException.hpp">
-      <Filter>Header Files\except</Filter>
-    </ClInclude>
-    <ClInclude Include="src\except\IOException.hpp">
-      <Filter>Header Files\except</Filter>
     </ClInclude>
     <ClInclude Include="src\utils\serviceHandler.hpp">
       <Filter>Header Files\utils</Filter>
@@ -74,17 +107,38 @@
     <ClInclude Include="src\utils\fileIO.hpp">
       <Filter>Header Files\utils</Filter>
     </ClInclude>
-    <ClInclude Include="utils\misc.hpp">
+    <ClInclude Include="src\utils\miscelaneous.hpp">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\random.hpp">
       <Filter>Header Files\utils</Filter>
     </ClInclude>
     <ClInclude Include="src\utils\logger.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\utils</Filter>
     </ClInclude>
-    <ClInclude Include="src\utils\miscelaneous.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\ecs\core\component.hpp">
+      <Filter>Header Files\ecs\core</Filter>
     </ClInclude>
-    <ClInclude Include="src\utils\random.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\ecs\core\componentType.hpp">
+      <Filter>Header Files\ecs\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ecs\entityManager.hpp">
+      <Filter>Header Files\ecs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\primitives\bitmask.hpp">
+      <Filter>Header Files\utils\primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resources\textureManager.hpp">
+      <Filter>Header Files\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resources\resourceManager.hpp">
+      <Filter>Header Files\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exceptions\IOException.hpp">
+      <Filter>Header Files\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exceptions\basenException.hpp">
+      <Filter>Header Files\exceptions</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

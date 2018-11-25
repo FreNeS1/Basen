@@ -3,7 +3,7 @@
 namespace Basen {
 
 	IOException::IOException(std::string t_message)
-		: GenericException(t_message)
+		: BasenException(t_message)
 	{}
 
 }

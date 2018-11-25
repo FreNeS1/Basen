@@ -7,11 +7,11 @@ namespace Basen {
 	class ServiceHandler
 	{
 	public:
-		static void						setLogger(Logger *t_logger);
-		static Logger&					getLogger();
+		static void setLogger(Logger *t_logger);
+		static Logger& getLogger();
 
 	private:
-		static std::unique_ptr<Logger>	m_logger;
+		static std::unique_ptr<Logger> m_logger;
 	};
 }
 

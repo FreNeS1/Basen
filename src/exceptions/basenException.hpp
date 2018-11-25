@@ -5,10 +5,10 @@
 
 namespace Basen {
 
-	class GenericException {
+	class BasenException {
 
 	public:
-		explicit			GenericException(std::string t_message);
+		explicit			BasenException(std::string t_message);
 		const std::string&	getMessage();
 
 	private:

@@ -24,9 +24,39 @@ namespace Basen {
 		}
 	}
 
-	void Logger::writeLog(const logType t_logType, const std::string &t_message) {
+	void Logger::trace(const std::string &t_message) {
 		std::string message = t_message;
-		this->buildLoggerMessage(t_logType, message);
+		this->buildLoggerMessage(Logger::logType::LOG_TRACE, message);
+		this->writeToFile(message);
+	}
+
+	void Logger::debug(const std::string &t_message) {
+		std::string message = t_message;
+		this->buildLoggerMessage(Logger::logType::LOG_DEBUG, message);
+		this->writeToFile(message);
+	}
+
+	void Logger::log(const std::string &t_message) {
+		std::string message = t_message;
+		this->buildLoggerMessage(Logger::logType::LOG_INFO, message);
+		this->writeToFile(message);
+	}
+
+	void Logger::warn(const std::string &t_message) {
+		std::string message = t_message;
+		this->buildLoggerMessage(Logger::logType::LOG_WARNING, message);
+		this->writeToFile(message);
+	}
+
+	void Logger::warn(const std::string &t_message) {
+		std::string message = t_message;
+		this->buildLoggerMessage(Logger::logType::LOG_ERROR, message);
+		this->writeToFile(message);
+	}
+
+	void Logger::warn(const std::string &t_message) {
+		std::string message = t_message;
+		this->buildLoggerMessage(Logger::logType::LOG_FATAL, message);
 		this->writeToFile(message);
 	}
 
@@ -57,6 +87,9 @@ namespace Basen {
 			}
 			else if (t_logType == logType::LOG_DEBUG) {
 				return "DEBUG";
+			}
+			else if (t_logType == logType::LOG_TRACE) {
+				return "TRACE";
 			}
 			else {
 				return "UNKNOWN";
